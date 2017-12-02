@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar onSearchTermSubmit={this.handleSearchTermSubmit} />
-        <SearchResultList />
+        <SearchResultList searchTerm={this.state.searchTerm} />
       </div>
     );
   }
