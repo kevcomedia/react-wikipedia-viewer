@@ -5,8 +5,7 @@ class SearchResult extends Component {
     return (
       <section className="SearchResult">
         <h2 className="SearchResult-title">
-          {/* TODO replace href with correct URL */}
-          <a href="#" target="_blank" rel="nofollow noopener">
+          <a href={this.props.link} target="_blank" rel="nofollow noopener">
             {this.props.title}
           </a>
         </h2>
