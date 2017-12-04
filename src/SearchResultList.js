@@ -28,6 +28,10 @@ class SearchResultList extends Component {
     this.setState({searchResults: []});
   }
 
+  shouldComponentUpdate(nextProps) {
+    return nextProps.willSearch;
+  }
+
   componentDidUpdate(prevProps) {
     // Without this, there would be ajax requests every second!
     if (prevProps === this.props) return;

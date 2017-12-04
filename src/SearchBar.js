@@ -3,13 +3,17 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
   constructor(props) {
     super(props);
+    this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
     this.handleSearchTermSubmit = this.handleSearchTermSubmit.bind(this);
+  }
+
+  handleSearchTermChange(event) {
+    this.props.onSearchTermChange(event.target.value);
   }
 
   handleSearchTermSubmit(event) {
     event.preventDefault();
-    // I'm not aware of a more "React-y" way of getting the input value, if any.
-    this.props.onSearchTermSubmit(event.target[0].value);
+    this.props.onSearchTermSubmit();
   }
 
   render() {
@@ -17,7 +21,7 @@ class SearchBar extends Component {
       <div className="SearchBar">
         <h1>Wikipedia Viewer</h1>
         <form onSubmit={this.handleSearchTermSubmit}>
-          <input type="text" />
+          <input type="text" onChange={this.handleSearchTermChange} />
           <button>Search</button>
           <button type="button">Random</button>
         </form>

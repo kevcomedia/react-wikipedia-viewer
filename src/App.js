@@ -8,19 +8,32 @@ class App extends Component {
     super(props);
     this.state = {
       searchTerm: '',
+      willSearch: false,
     };
+    this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
     this.handleSearchTermSubmit = this.handleSearchTermSubmit.bind(this);
   }
 
-  handleSearchTermSubmit(searchTerm) {
-    this.setState({searchTerm});
+  handleSearchTermChange(searchTerm) {
+    this.setState({
+      searchTerm,
+      willSearch: false,
+    });
+  }
+
+  handleSearchTermSubmit() {
+    this.setState({willSearch: true});
   }
 
   render() {
     return (
       <div className="App">
-        <SearchBar onSearchTermSubmit={this.handleSearchTermSubmit} />
-        <SearchResultList searchTerm={this.state.searchTerm} />
+        <SearchBar
+          onSearchTermChange={this.handleSearchTermChange}
+          onSearchTermSubmit={this.handleSearchTermSubmit} />
+        <SearchResultList
+          searchTerm={this.state.searchTerm}
+          willSearch={this.state.willSearch} />
       </div>
     );
   }
