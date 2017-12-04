@@ -5,6 +5,7 @@ class SearchBar extends Component {
     super(props);
     this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
     this.handleSearchTermSubmit = this.handleSearchTermSubmit.bind(this);
+    this.handleRandomClick = this.handleRandomClick.bind(this);
   }
 
   handleSearchTermChange(event) {
@@ -16,6 +17,10 @@ class SearchBar extends Component {
     this.props.onSearchTermSubmit();
   }
 
+  handleRandomClick(event) {
+    window.open('https://en.wikipedia.org/wiki/Special:Random');
+  }
+
   render() {
     return (
       <div className="SearchBar">
@@ -23,7 +28,7 @@ class SearchBar extends Component {
         <form onSubmit={this.handleSearchTermSubmit}>
           <input type="text" onChange={this.handleSearchTermChange} />
           <button>Search</button>
-          <button type="button">Random</button>
+          <button type="button" onClick={this.handleRandomClick}>Random</button>
         </form>
       </div>
     );
