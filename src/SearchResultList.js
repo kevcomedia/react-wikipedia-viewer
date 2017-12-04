@@ -5,10 +5,16 @@ import flattenOpensearchResult from './flattenOpensearchResult';
 class SearchResultList extends Component {
   constructor(props) {
     super(props);
-    this.state = {searchResults: []};
+    this.state = {searchResults: [], hasError: false};
   }
 
   render() {
+    if (this.state.hasError) {
+      return (
+        <p>Oops, something went wrong!</p>
+      );
+    }
+
     const searchResults
       = this.state.searchResults.map((result) =>
           <SearchResult
@@ -25,7 +31,7 @@ class SearchResultList extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({searchResults: []});
+    this.setState({searchResults: [], hasError: false});
   }
 
   shouldComponentUpdate(nextProps) {
@@ -44,7 +50,8 @@ class SearchResultList extends Component {
         return response.json();
       })
       .then(flattenOpensearchResult)
-      .then((searchResults) => this.setState({searchResults}));
+      .then((searchResults) => this.setState({searchResults}))
+      .catch((e) => this.setState({hasError: true}));
   }
 }
 
