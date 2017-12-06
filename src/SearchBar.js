@@ -27,9 +27,17 @@ class SearchBar extends Component {
       <div className="SearchBar">
         <h1>Wikipedia Viewer</h1>
         <form onSubmit={this.handleSearchTermSubmit}>
-          <input type="text" onChange={this.handleSearchTermChange} />
-          <button>Search</button>
-          <button type="button" onClick={this.handleRandomClick}>Random</button>
+          <input
+            class="SearchBar-input"
+            type="text"
+            onChange={this.handleSearchTermChange} />
+          <button class="SearchBar-btn">Search</button>
+          <button
+            class="SearchBar-btn"
+            type="button"
+            onClick={this.handleRandomClick}>
+              Random
+          </button>
         </form>
       </div>
     );

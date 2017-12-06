@@ -7,3 +7,38 @@
   margin-top: 0;
   text-align: center;
 }
+
+.SearchBar form {
+  display: flex;
+  justify-content: center;
+}
+
+.SearchBar-input,
+.SearchBar-btn {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.SearchBar-input {
+  border: 0;
+  border-bottom: 2px solid #d3d3d3;
+  padding: .5rem;
+  transition: border-bottom .15s ease-in;
+  flex-basis: 50%;
+}
+
+.SearchBar-input:focus {
+  border-bottom-color: #86bbd8;
+}
+
+.SearchBar-btn {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #128282;
+  transition: background-color .2s ease-out;
+}
+
+.SearchBar-btn:hover {
+  background-color: #86bbd8;
+}
