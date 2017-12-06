@@ -25,6 +25,7 @@
   padding: .5rem;
   transition: border-bottom .15s ease-in;
   flex-basis: 50%;
+  margin-right: .5rem;
 }
 
 .SearchBar-input:focus {
