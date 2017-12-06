@@ -31,6 +31,7 @@ class SearchBar extends Component {
             class="SearchBar-input"
             type="text"
             placeholder="Search Wikipedia"
+            autofocus="autofocus"
             onChange={this.handleSearchTermChange} />
           <button class="SearchBar-btn">
             <span class="fa fa-search fa-lg fa-fw" aria-hidden="true"></span>
