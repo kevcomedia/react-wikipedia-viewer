@@ -31,12 +31,14 @@ class SearchBar extends Component {
             class="SearchBar-input"
             type="text"
             onChange={this.handleSearchTermChange} />
-          <button class="SearchBar-btn">Search</button>
+          <button class="SearchBar-btn">
+            <span class="fa fa-search fa-lg fa-fw" aria-hidden="true"></span>
+          </button>
           <button
             class="SearchBar-btn"
             type="button"
             onClick={this.handleRandomClick}>
-              Random
+            <span class="fa fa-random fa-lg fa-fw" aria-hidden="true"></span>
           </button>
         </form>
       </div>
