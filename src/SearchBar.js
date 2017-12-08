@@ -28,19 +28,23 @@ class SearchBar extends Component {
         <h1>Wikipedia Viewer</h1>
         <form onSubmit={this.handleSearchTermSubmit}>
           <input
-            class="SearchBar-input"
+            className="SearchBar-input"
             type="text"
             placeholder="Search Wikipedia"
-            autofocus="autofocus"
+            autoFocus
             onChange={this.handleSearchTermChange} />
-          <button class="SearchBar-btn">
-            <span class="fa fa-search fa-lg fa-fw" aria-hidden="true"></span>
+          <button className="SearchBar-btn">
+            <span
+              className="fa fa-search fa-lg fa-fw"
+              aria-hidden="true"></span>
           </button>
           <button
-            class="SearchBar-btn"
+            className="SearchBar-btn"
             type="button"
             onClick={this.handleRandomClick}>
-            <span class="fa fa-random fa-lg fa-fw" aria-hidden="true"></span>
+            <span
+              className="fa fa-random fa-lg fa-fw"
+              aria-hidden="true"></span>
           </button>
         </form>
       </div>
