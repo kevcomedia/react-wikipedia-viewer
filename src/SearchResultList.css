@@ -1,4 +1,8 @@
+.SearchResultList-loading,
+.SearchResultList-error {
+  text-align: center;
+}
+
 .SearchResultList-loading {
   color: #86bbd8;
-  text-align: center;
 }

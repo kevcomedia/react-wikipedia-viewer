@@ -27,7 +27,7 @@ class SearchResultList extends Component {
 
     if (this.state.hasError) {
       return (
-        <p>Oops, something went wrong!</p>
+        <p className="SearchResultList-error">Oops, something went wrong!</p>
       );
     }
 
