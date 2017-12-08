@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchResult from './SearchResult';
 import flattenOpensearchResult from './flattenOpensearchResult';
+import './SearchResultList.css';
 
 class SearchResultList extends Component {
   constructor(props) {
@@ -15,7 +16,12 @@ class SearchResultList extends Component {
   render() {
     if (this.state.isLoading) {
       return (
-        <p>Loading...</p>
+        <p className="SearchResultList-loading">
+          <span
+            className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"
+            aria-hidden="true">
+          </span>
+        </p>
       );
     }
 
