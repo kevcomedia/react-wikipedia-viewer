@@ -1,0 +1,17 @@
+.SearchResult {
+  background-color: #fefcfb;
+  border-bottom: 2px solid #86bbd8;
+  padding: 1.5rem 2rem;
+}
+
+.SearchResult-title {
+  margin-top: 0;
+}
+
+.SearchResult-title a {
+  color: #128282;
+}
+
+.SearchResult-description {
+  margin-bottom: 0;
+}
