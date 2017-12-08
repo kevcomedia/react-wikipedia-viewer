@@ -21,6 +21,7 @@
 }
 
 .SearchBar-input {
+  background-color: #fefcfb;
   border: 0;
   border-bottom: 2px solid #d3d3d3;
   padding: .5rem;
