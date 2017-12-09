@@ -4,6 +4,12 @@
   padding: 1.5rem 2rem;
 }
 
+@media screen and (max-width: 400px) {
+  .SearchResult {
+    padding: 1.5rem;
+  }
+}
+
 .SearchResult-title {
   margin-top: 0;
 }

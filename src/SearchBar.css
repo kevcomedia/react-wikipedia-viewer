@@ -51,3 +51,22 @@
 .SearchBar-btn:hover {
   background-color: #86bbd8;
 }
+
+@media screen and (max-width: 648px) {
+  .SearchBar {
+    flex-flow: column nowrap;
+  }
+
+  .SearchBar h1 {
+    font-size: 1.8rem;
+  }
+  
+  .SearchBar form {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .SearchBar-input {
+    flex-basis: 70%;
+  }
+}
